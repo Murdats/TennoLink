@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennoLink", "TennoLink\TennoLink.csproj", "{BACADC2F-0607-4E82-980E-76989C7D6B31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{46A63AD0-DDDB-4AD1-9C76-F3FB22F5E619}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{FB4DF7DB-D16C-40DE-923A-DA25724E8E6E}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\TennoLink-WAWS-dev.json = PublishScripts\Configurations\TennoLink-WAWS-dev.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennoLink.Tests", "TennoLink.Tests\TennoLink.Tests.csproj", "{59154ABE-F0BC-4995-A7B5-FAC680122B2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BACADC2F-0607-4E82-980E-76989C7D6B31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACADC2F-0607-4E82-980E-76989C7D6B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACADC2F-0607-4E82-980E-76989C7D6B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACADC2F-0607-4E82-980E-76989C7D6B31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59154ABE-F0BC-4995-A7B5-FAC680122B2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59154ABE-F0BC-4995-A7B5-FAC680122B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59154ABE-F0BC-4995-A7B5-FAC680122B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59154ABE-F0BC-4995-A7B5-FAC680122B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB4DF7DB-D16C-40DE-923A-DA25724E8E6E} = {46A63AD0-DDDB-4AD1-9C76-F3FB22F5E619}
+	EndGlobalSection
+EndGlobal
