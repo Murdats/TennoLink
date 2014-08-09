@@ -1,15 +1,17 @@
-﻿using Autofac;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Configuration;
 using System.Linq;
-using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Autofac;
+using Autofac.Integration.Mvc;
+using Autofac.Integration.WebApi;
+using TennoLink.AppStart;
 using TennoLink.Models;
 using TennoLink.Services;
+using TennoLink.Services.Interfaces;
 
 namespace TennoLink
 {
@@ -23,7 +25,9 @@ namespace TennoLink
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            RegisterDependencies();
+            var container = RegisterDependencies();
+
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }
 
         protected IContainer RegisterDependencies()
@@ -34,14 +38,17 @@ namespace TennoLink
                 StatusUrl = ConfigurationManager.AppSettings["WarframeApi"],
             };
 
-            var container = new ContainerBuilder();
+            var builder = new ContainerBuilder();
 
-            container.RegisterType<MotdService>().As<IMotdService>();
-            container.RegisterType<WarframeStatusService>().As<IWarframeStatusService>();
+            builder.RegisterType<MotdService>().As<IMotdService>();
+            builder.RegisterType<WarframeStatusService>().As<IWarframeStatusService>();
 
-            container.Register(p => config).As<IConfig>();
+            builder.Register(p => config).As<IConfig>().SingleInstance();
 
-            return container.Build();
+            builder.RegisterControllers(typeof(MvcApplication).Assembly);
+            builder.RegisterApiControllers(typeof(MvcApplication).Assembly);
+
+            return builder.Build();
         }
     }
 }
