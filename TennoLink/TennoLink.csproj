@@ -170,7 +170,7 @@
     <Compile Include="Models\Enums\OperationType.cs" />
     <Compile Include="Models\GlobalUpgrade.cs" />
     <Compile Include="Models\History.cs" />
-    <Compile Include="Models\IConfig.cs" />
+    <Compile Include="Models\Interfaces\IConfig.cs" />
     <Compile Include="Models\Invasion.cs" />
     <Compile Include="Models\MissionInfo.cs" />
     <Compile Include="Models\MissionReward.cs" />
@@ -184,13 +184,16 @@
     <Compile Include="Services\Interfaces\IWarframeStatusService.cs" />
     <Compile Include="Services\MotdService.cs" />
     <Compile Include="Services\WarframeStatusService.cs" />
+    <Compile Include="Utils\JsonConverters\EnumIdentifierConverter.cs" />
+    <Compile Include="Utils\IdentifierAttribute.cs" />
+    <Compile Include="Utils\JsonConverters\MongoDateConverter.cs" />
+    <Compile Include="Utils\JsonConverters\MongoIdConverter.cs" />
     <Compile Include="ViewModels\TennoLinkViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.js" />
@@ -199,7 +202,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Properties\PublishProfiles\TennoLink1200.pubxml" />
+    <None Include="Properties\PublishProfiles\TennoLink.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -230,9 +233,6 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>

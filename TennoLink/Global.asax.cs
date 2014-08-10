@@ -10,6 +10,7 @@ using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using TennoLink.AppStart;
 using TennoLink.Models;
+using TennoLink.Models.Interfaces;
 using TennoLink.Services;
 using TennoLink.Services.Interfaces;
 

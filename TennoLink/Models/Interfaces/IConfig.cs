@@ -1,4 +1,4 @@
-namespace TennoLink.Models
+namespace TennoLink.Models.Interfaces
 {
     public interface IConfig
     {

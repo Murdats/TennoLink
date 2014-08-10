@@ -1,10 +1,16 @@
 using System;
+using Newtonsoft.Json;
 using TennoLink.Models.Enums;
+using TennoLink.Utils.JsonConverters;
 
 namespace TennoLink.Models
 {
     public class Invasion
     {
+        [JsonProperty(PropertyName = "_id")]
+        [JsonConverter(typeof(MongoIdConverter))]
+        public string Id { get; set; }
+
         public DateTime Activation { get; set; }
 
         public MissionInfo AttackerMissionInfo { get; set; }
@@ -26,7 +32,5 @@ namespace TennoLink.Models
         public string LocTag { get; set; }
 
         public Node Node { get; set; }
-
-        public string Id { get; set; }
     }
 }

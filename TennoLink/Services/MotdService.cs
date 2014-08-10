@@ -1,6 +1,4 @@
-﻿using Itenso.Rtf;
-using Itenso.Rtf.Converter.Html;
-using Itenso.Rtf.Parser;
+﻿using Itenso.Rtf.Converter.Html;
 using Itenso.Rtf.Support;
 using System;
 using System.IO;
@@ -9,7 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Windows.Forms;
-using TennoLink.Models;
+using TennoLink.Models.Interfaces;
 using TennoLink.Services.Interfaces;
 
 namespace TennoLink.Services
@@ -36,8 +34,7 @@ namespace TennoLink.Services
         public HtmlString GetMotdHtml()
         {
             var rtf = GetMotdRaw();
-            var parserLogger = new RtfParserListenerFileLogger(@"F:\Code\Personal\TennoLink\TennoLink\rtfLog.txt");
-            var rtfGroup = RtfParserTool.Parse(rtf, parserLogger);
+            var rtfGroup = RtfParserTool.Parse(rtf);
             var rtfDocument = RtfInterpreterTool.BuildDoc(rtfGroup);
 
             var htmlConverter = new RtfHtmlConverter(rtfDocument);

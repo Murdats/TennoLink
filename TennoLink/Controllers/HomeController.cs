@@ -10,9 +10,12 @@ namespace TennoLink.Controllers
     {
         private readonly IMotdService motdService;
 
-        public HomeController(IMotdService motdService)
+        private readonly IWarframeStatusService statusService;
+
+        public HomeController(IMotdService motdService, IWarframeStatusService statusService)
         {
             this.motdService = motdService;
+            this.statusService = statusService;
         }
 
         public ActionResult Index()
@@ -21,6 +24,13 @@ namespace TennoLink.Controllers
             {
                 Motd = motdService.GetMotdHtml()
             };
+
+            var status = statusService.GetStatus();
+
+            if (status.BuildLabel == null)
+            {
+                throw new Exception();
+            }
 
             return View(viewModel);
         }

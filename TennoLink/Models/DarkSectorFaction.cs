@@ -1,9 +1,14 @@
 using System;
+using Newtonsoft.Json;
+using TennoLink.Utils.JsonConverters;
 
 namespace TennoLink.Models
 {
     public class DarkSectorFaction
     {
+        [JsonConverter(typeof(MongoIdConverter))]
+        public string Id { get; set; }
+
         public int CreditsTaxRate { get; set; }
 
         public int DamagePerMission { get; set; }
@@ -17,8 +22,6 @@ namespace TennoLink.Models
         public int HealCost { get; set; }
 
         public double HealRate { get; set; }
-
-        public string Id { get; set; }
 
         public bool IsAlliance { get; set; }
 
@@ -38,7 +41,7 @@ namespace TennoLink.Models
 
         public string Name { get; set; }
 
-        public int RailHealReserve { get; set; }
+        public float RailHealReserve { get; set; }
 
         public string RailType { get; set; }
 

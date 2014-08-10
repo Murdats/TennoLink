@@ -10,12 +10,10 @@ namespace TennoLink.Models
 
         public List<object> Items { get; set; }
 
-        public List<object> CountedItems { get; set; }
+        public List<CountedItem> CountedItems { get; set; }
 
         public int Credits { get; set; }
 
         public string RandomizedItems { get; set; }
-
-        public List<CountedItem> CountedItems1 { get; set; }
     }
 }

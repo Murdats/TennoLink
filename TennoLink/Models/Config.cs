@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using TennoLink.Models.Interfaces;
 
 namespace TennoLink.Models
 {

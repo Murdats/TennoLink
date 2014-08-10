@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace TennoLink.Models
 {
@@ -8,6 +9,7 @@ namespace TennoLink.Models
     {
         public string BuildLabel { get; set; }
 
+        [JsonProperty("Events")]
         public List<News> News { get; set; }
 
         public List<object> Goals { get; set; }
@@ -22,6 +24,7 @@ namespace TennoLink.Models
 
         public List<NodeOverride> NodeOverrides { get; set; }
 
-        public List<DarkSectorNode> BadlandNodes { get; set; }
+        [JsonProperty("BadlandNodes")]
+        public List<DarkSectorNode> DarkSectors { get; set; }
     }
 }

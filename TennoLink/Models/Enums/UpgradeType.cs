@@ -1,12 +1,14 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Linq;
+using TennoLink.Utils;
 
 namespace TennoLink.Models.Enums
 {
     public enum UpgradeType
     {
-        [Description("GAMEPLAY_PICKUP_AMOUNT")]
-        GameplayPickupAmount
+        [Identifier("GAMEPLAY_PICKUP_AMOUNT")]
+        GameplayPickupAmount,
+        [Identifier("GAMEPLAY_PICKUP_RATE")]
+        GameplayPickupRate,
     }
 }
