@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using TennoLink.Models.Enums;
+using TennoLink.Utils;
 using TennoLink.Utils.JsonConverters;
 
 namespace TennoLink.Models
@@ -14,10 +15,10 @@ namespace TennoLink.Models
 
         public Faction Faction { get; set; }
 
-        public string LevelOverride { get; set; }
+        public LocalisationString LevelOverride { get; set; }
 
-        public string EnemySpec { get; set; }
+        public LocalisationString EnemySpec { get; set; }
 
-        public string VipAgent { get; set; }
+        public LocalisationString VipAgent { get; set; }
     }
 }

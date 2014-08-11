@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Linq;
+using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -43,6 +44,8 @@ namespace TennoLink
 
             builder.RegisterType<MotdService>().As<IMotdService>();
             builder.RegisterType<WarframeStatusService>().As<IWarframeStatusService>();
+            builder.RegisterType<UserLocaleService>().As<IUserLocaleService>();
+            builder.RegisterType<LocalisationService>().As<ILocalisationService>().SingleInstance();
 
             builder.Register(p => config).As<IConfig>().SingleInstance();
 

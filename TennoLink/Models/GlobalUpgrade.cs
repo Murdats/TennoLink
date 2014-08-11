@@ -1,6 +1,7 @@
 using System;
 using Newtonsoft.Json;
 using TennoLink.Models.Enums;
+using TennoLink.Utils;
 using TennoLink.Utils.JsonConverters;
 
 namespace TennoLink.Models
@@ -25,6 +26,6 @@ namespace TennoLink.Models
 
         public int Value { get; set; }
 
-        public string ValidType { get; set; }
+        public LocalisationString ValidType { get; set; }
     }
 }

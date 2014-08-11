@@ -1,6 +1,7 @@
 using System;
 using Newtonsoft.Json;
 using TennoLink.Models.Enums;
+using TennoLink.Utils;
 using TennoLink.Utils.JsonConverters;
 
 namespace TennoLink.Models
@@ -29,7 +30,7 @@ namespace TennoLink.Models
 
         public int Goal { get; set; }
 
-        public string LocTag { get; set; }
+        public LocalisationString LocTag { get; set; }
 
         public Node Node { get; set; }
     }

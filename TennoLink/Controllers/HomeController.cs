@@ -25,12 +25,6 @@ namespace TennoLink.Controllers
                 Motd = motdService.GetMotdHtml()
             };
 
-            var status = statusService.GetStatus();
-
-            if (status.BuildLabel == null)
-            {
-                throw new Exception();
-            }
 
             return View(viewModel);
         }

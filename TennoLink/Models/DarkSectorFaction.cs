@@ -1,5 +1,6 @@
 using System;
 using Newtonsoft.Json;
+using TennoLink.Utils;
 using TennoLink.Utils.JsonConverters;
 
 namespace TennoLink.Models
@@ -43,7 +44,7 @@ namespace TennoLink.Models
 
         public float RailHealReserve { get; set; }
 
-        public string RailType { get; set; }
+        public LocalisationString RailType { get; set; }
 
         public int StrengthRemaining { get; set; }
 

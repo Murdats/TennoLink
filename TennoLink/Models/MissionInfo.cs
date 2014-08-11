@@ -1,10 +1,13 @@
 using TennoLink.Models.Enums;
+using TennoLink.Utils;
+using Newtonsoft.Json;
 
 namespace TennoLink.Models
 {
     public class MissionInfo
     {
-        public string Description { get; set; }
+        [JsonProperty("descText")]
+        public LocalisationString Description { get; set; }
 
         public Node Location { get; set; }
 
@@ -16,11 +19,11 @@ namespace TennoLink.Models
 
         public MissionReward Reward { get; set; }
 
-        public string LevelOverride { get; set; }
+        public LocalisationString LevelOverride { get; set; }
 
-        public string EnemyType { get; set; }
+        public LocalisationString EnemyType { get; set; }
 
-        public string Boss { get; set; }
+        public LocalisationString Boss { get; set; }
 
         public int MinEnemyLevel { get; set; }
 
@@ -34,8 +37,8 @@ namespace TennoLink.Models
 
         public MissionReward MissionReward { get; set; }
 
-        public string EnemySpec { get; set; }
+        public LocalisationString EnemySpec { get; set; }
 
-        public string VipAgent { get; set; }
+        public LocalisationString VipAgent { get; set; }
     }
 }

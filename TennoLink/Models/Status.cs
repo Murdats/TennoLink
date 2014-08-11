@@ -22,7 +22,8 @@ namespace TennoLink.Models
 
         public List<Invasion> Invasions { get; set; }
 
-        public List<NodeOverride> NodeOverrides { get; set; }
+        //Uninteresting
+        //public List<NodeOverride> NodeOverrides { get; set; }
 
         [JsonProperty("BadlandNodes")]
         public List<DarkSectorNode> DarkSectors { get; set; }

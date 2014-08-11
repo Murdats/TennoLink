@@ -22,7 +22,9 @@ namespace TennoLink.Services
         public Status GetStatus()
         {
             var json = GetStatusJson(config.StatusUrl);
-            return JsonConvert.DeserializeObject<Status>(json, new MongoDateConverter(), new EnumIdentifierConverter());
+            
+            return JsonConvert.DeserializeObject<Status>(json, new MongoDateConverter(), new EnumIdentifierConverter(), new LocalisationStringConverter());
+
         }
 
         protected string GetStatusJson(string url)

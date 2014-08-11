@@ -10,9 +10,11 @@ namespace TennoLink.Models
         [JsonConverter(typeof(MongoIdConverter))]
         public string Id { get; set; }
 
-        public string Msg { get; set; }
+        [JsonProperty("Title")]
+        public string Title { get; set; }
 
-        public string Prop { get; set; }
+        [JsonProperty("Prop")]
+        public string Url { get; set; }
 
         public DateTime Date { get; set; }
     }

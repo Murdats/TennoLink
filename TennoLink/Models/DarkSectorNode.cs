@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using TennoLink.Models.Enums;
+using TennoLink.Utils;
 using TennoLink.Utils.JsonConverters;
 
 namespace TennoLink.Models
@@ -20,11 +22,11 @@ namespace TennoLink.Models
 
         public DateTime LastNameCacheTime { get; set; }
 
-        public string Node { get; set; }
+        public Node Node { get; set; }
 
         public string NodeDisplayName { get; set; }
 
-        public string NodeRegionName { get; set; }
+        public LocalisationString NodeRegionName { get; set; }
 
         public DateTime PostConflictCooldown { get; set; }
 

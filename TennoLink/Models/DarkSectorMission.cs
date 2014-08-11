@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using TennoLink.Models.Enums;
+using TennoLink.Utils;
 
 namespace TennoLink.Models
 {
@@ -8,11 +10,15 @@ namespace TennoLink.Models
 
         public string BadlandWarlordName { get; set; }
 
-        public string BadlandWarlordSuit { get; set; }
+        public LocalisationString BadlandWarlordSuit { get; set; }
 
-        public List<object> CustomAllySpectres { get; set; }
+        public List<string> BadlandMemberNames { get; set; }
 
-        public List<object> CustomEnemySpectres { get; set; }
+        public List<LocalisationString> BadlandMemberSuits { get; set; }
+
+        public List<Spectre> CustomAllySpectres { get; set; }
+
+        public List<Spectre> CustomEnemySpectres { get; set; }
 
         public int Difficulty { get; set; }
 
@@ -20,10 +26,10 @@ namespace TennoLink.Models
 
         public string Faction { get; set; }
 
-        public string GameRules { get; set; }
+        public LocalisationString GameRules { get; set; }
 
-        public string LevelOverride { get; set; }
+        public LocalisationString LevelOverride { get; set; }
 
-        public string MissionType { get; set; }
+        public MissionType MissionType { get; set; }
     }
 }
